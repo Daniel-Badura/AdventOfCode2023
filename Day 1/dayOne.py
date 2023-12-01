@@ -41,14 +41,10 @@ with open('data.txt', 'r') as data:
     # Iterate over each line in the file
     for line in data:
         matches = re.findall(regex, line)
-       
-    converted = []
-
-    for match in matches:
-        converted += convert(match)
-    print(converted)   
-    result = int(converted[0] + converted[-1])
-    sum += result
-    # print(result)
-    
-print(sum)
+        converted = []
+        for match in matches:
+            converted += convert(match)
+           
+        result = int(converted[0] + converted[-1])
+        sum += result
+    print(sum)
