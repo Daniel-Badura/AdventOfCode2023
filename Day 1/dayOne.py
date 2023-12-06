@@ -14,6 +14,7 @@ inputStrings = [
 ]
 def convert(number):
     number_dict = {
+        "0":"0",
         "1":"1",
         "2":"2",
         "3":"3",
@@ -36,15 +37,16 @@ def convert(number):
     }
     return number_dict.get(number, number)
 sum = 0
-# Open the file in read mode
+
 with open('data.txt', 'r') as data:
-    # Iterate over each line in the file
+   
     for line in data:
         matches = re.findall(regex, line)
         converted = []
         for match in matches:
             converted += convert(match)
-           
+        print(converted)
         result = int(converted[0] + converted[-1])
+        print(result)
         sum += result
     print(sum)

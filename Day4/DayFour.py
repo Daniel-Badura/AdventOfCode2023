@@ -24,5 +24,5 @@ for line_number, card_line in enumerate(card_lines):
     for i in range(line_number, line_number + matching_numbers_len):
         line_copies_dict[i + 1] = line_copies_dict.get(i + 1, 0) + (1 * scratch_copies)
 
-print('Day 4 part 1 answer:', total_points)
-print('Day 4 part 2 answer:', total_scratch_cards)
+print('Part 1:', total_points)
+print('Part 2:', total_scratch_cards)
